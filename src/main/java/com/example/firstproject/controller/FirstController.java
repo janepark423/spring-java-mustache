@@ -14,4 +14,11 @@ public class FirstController {
         //templates안에 greetings를 찾아서 브라우저로 전송
         //리턴 타입이 스트링이라 "";로 선언
     }
+
+
+    @GetMapping("/bye")
+    public String seeYouNext(Model model){
+        model.addAttribute("nickname", "parkjain");
+        return "goodbye";
+    }
 }
