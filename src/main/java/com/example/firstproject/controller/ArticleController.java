@@ -73,13 +73,14 @@ public class ArticleController {
     }
 
     @GetMapping("/articles")
-    public String index(){
+    public String index(Model model){
         //1. 모든 Article을 가져온다! (리파지터리가 필요)
         List<Article> articleEntityList =articleRepository.findAll();
         
         //2. 가져온 Article 묶음을 뷰로 전달한다.
+        model.addAttribute("articleList",articleEntityList);
         
         //3. 뷰 페이지를 설정
-        return "";
+        return "articles/index";
     }
 }
