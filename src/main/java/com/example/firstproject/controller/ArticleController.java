@@ -48,7 +48,7 @@ public class ArticleController {
         //FIXME: articleRepository를 saved로 반환해준다.
         log.info(saved.toString());
         //System.out.println(saved.toString());
-        return "";
+        return "redirect:/articles/" +saved.getId();
     }
 
     @GetMapping("/articles/{id}")
