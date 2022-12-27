@@ -21,6 +21,7 @@ public class ArticleForm {
     }
 
     public Article toEntity() {
+        //TODO: 엔티티 Article 객체를 반환해줌
         return new Article(null, title, content);
     }
 }

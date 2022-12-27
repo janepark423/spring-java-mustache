@@ -8,10 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity  //DB가 해당 객체를 인식 가능!
+@Entity  //TODO: DB가 해당 객체를 인식 가능!
 public class Article {
 
-    @Id //대표값을 지정
+    @Id //TODO: DB가 이해할 수 있는 값이 되도록, 대표값을 지정
     @GeneratedValue //1,2,3, 자동 생성 어노테이션
     private Long id;
     
