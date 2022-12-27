@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 @Slf4j //로깅을 위한 골뱅이 sout 대신의 역할을 함
 public class ArticleController {
@@ -69,6 +71,12 @@ public class ArticleController {
 
     @GetMapping("/articles")
     public String index(){
+        //1. 모든 Article을 가져온다! (리파지터리가 필요)
+        Iterable<Article> articleEntityList = articleRepository.findAll();
+        
+        //2. 가져온 Article 묶음을 뷰로 전달한다.
+        
+        //3. 뷰 페이지를 설정
         return "";
     }
 }
