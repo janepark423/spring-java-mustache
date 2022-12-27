@@ -53,6 +53,7 @@ public class ArticleController {
 
         //TODO: 1번  ID로 데이터를 가져옴(리파지토리에서 가져옴)
         Article articleEntity = articleRepository.findById(id).orElse(null);
+        //FIXME: ID값이나 DATA가 없을 경우 예외처리
 
 
 
@@ -64,5 +65,9 @@ public class ArticleController {
 
         //TODO: 3번  보여줄 페이지를 설정!
         return "articles/show";
+    }
+
+    public String index(){
+        return "";
     }
 }
