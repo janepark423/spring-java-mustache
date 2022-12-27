@@ -23,7 +23,9 @@ public class ArticleController {
 
     @PostMapping("/articles/create")
     public String createArticle(ArticleForm form){
-        System.out.println(form.toString());
+        
+        //TODO: SOUT을 LOGGING으로 대체하자
+        //System.out.println(form.toString());
         
         //TODO: 1. Dto를 변환! Entity로
         Article article = form.toEntity();
