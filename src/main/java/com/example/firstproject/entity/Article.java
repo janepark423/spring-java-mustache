@@ -1,6 +1,7 @@
 package com.example.firstproject.entity;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity  //TODO: DB가 해당 객체를 인식 가능!
+@AllArgsConstructor //id, title, content에 해당하는 생성자를 저 넘이 생성해줌
 public class Article {
 
     @Id //TODO: DB가 이해할 수 있는 값이 되도록, 대표값을 지정
@@ -30,9 +32,10 @@ public class Article {
                 '}';
     }
 
-    public Article(Long id, String title, String content) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-    }
+    //TODO: 생성자
+//    public Article(Long id, String title, String content) {
+//        this.id = id;
+//        this.title = title;
+//        this.content = content;
+//    }
 }
