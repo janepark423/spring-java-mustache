@@ -4,6 +4,7 @@ package com.example.firstproject.controller;
 import com.example.firstproject.dto.ArticleForm;
 import com.example.firstproject.entity.Article;
 import com.example.firstproject.repository.ArticleRepository;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -72,7 +75,7 @@ public class ArticleController {
     @GetMapping("/articles")
     public String index(){
         //1. 모든 Article을 가져온다! (리파지터리가 필요)
-        Iterable<Article> articleEntityList = articleRepository.findAll();
+        List<Article> articleEntityList =articleRepository.findAll();
         
         //2. 가져온 Article 묶음을 뷰로 전달한다.
         
