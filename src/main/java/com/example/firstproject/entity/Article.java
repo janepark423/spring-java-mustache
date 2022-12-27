@@ -2,6 +2,7 @@ package com.example.firstproject.entity;
 
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.stereotype.Controller;
 
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 @Entity  //TODO: DB가 해당 객체를 인식 가능!
 @AllArgsConstructor //TODO:id, title, content에 해당하는 생성자를 저 넘이 생성해줌
 @ToString //TODO: TOSTRING
+@NoArgsConstructor //TODO: 디폴트 생성자
 public class Article {
 
     @Id //TODO: DB가 이해할 수 있는 값이 되도록, 대표값을 지정
@@ -25,6 +27,10 @@ public class Article {
     @Column
     private String content;
 
+    //TODO: 디폴트 생성자
+//    Article(){
+//
+//    }
 //    @Override
 //    public String toString() {
 //        return "Article{" +
