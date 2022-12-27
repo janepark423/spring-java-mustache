@@ -67,6 +67,7 @@ public class ArticleController {
         return "articles/show";
     }
 
+    @GetMapping("/articles")
     public String index(){
         return "";
     }
